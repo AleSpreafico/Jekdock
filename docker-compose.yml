@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  jekyll:
+    container_name: jekyll
+    build:
+      context: ./services/base
+    image: jekyll:1.1
+    volumes:
+      - ${SRC_FOLDER}:/src
+    tty: true
+
